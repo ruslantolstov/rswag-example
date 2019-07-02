@@ -1,0 +1,78 @@
+require:
+  - rubocop/cop/internal_affairs
+  - rubocop-performance
+  - rubocop-thread_safety
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'bin/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+  TargetRailsVersion: 5.2.3
+  TargetRubyVersion: 2.6.2
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+
+Rails:
+  Enabled: true
+
+Rails/FilePath:
+  EnforcedStyle: slashes
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  ExcludedMethods:
+    - as_json
+
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/capistrano/tasks/**/*'
+    - 'lib/tasks/**/*'
+    - 'spec/**/*'
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Style/Documentation:
+  Enabled: false
+
+Style/MethodDefParentheses:
+  Enabled: false
+
+Layout/ClassStructure:
+  Enabled: true
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - association
+    - public_attribute_macros
+    - public_delegate
+    - macros
+    - public_class_methods
+    - initializer
+    - public_methods
+    - protected_attribute_macros
+    - protected_methods
+    - private_attribute_macros
+    - private_delegate
+    - private_methods
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/AlignArguments:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/IndentFirstHashElement:
+  EnforcedStyle: consistent
+
+Layout/ExtraSpacing:
+  AllowForAlignment: true

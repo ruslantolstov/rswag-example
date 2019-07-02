@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Demo how to use rswag-api, rswag-specs.
+ 
 
-Things you may want to cover:
+### Setup
 
-* Ruby version
+```
+cp .env.example .env
+rails db:create db:migrate
+rails server
+```
 
-* System dependencies
+### Generate the Swagger JSON file
 
-* Configuration
+```
+rake rswag:specs:swaggerize
+open http://localhost:3000/api/docs/swagger.json
+```
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
