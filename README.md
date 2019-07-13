@@ -11,6 +11,15 @@ rails db:create db:migrate
 rails server
 ```
 
+### Setup Docker
+```
+docker-compose build
+docker-compose up
+docker-compose run web rake db:create db:migrate
+open http://localhost:3000/
+```
+Use `docker attach ID` to get into the running container, for detach without exit `Ctrl-p`, `Ctrl-q`
+
 ### Generate the Swagger JSON file
 
 ```
