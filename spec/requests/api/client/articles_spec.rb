@@ -2,8 +2,8 @@
 
 require 'swagger_helper'
 
-describe 'Articles' do
-  path '/api/articles' do
+describe 'Articles', swagger_doc: CLIENT_DOC do
+  path '/api/client/articles' do
     get 'Find all articles' do
       tags 'Articles'
       parameter name: :page, in: :query, type: :integer, description: 'Page number. Default: 1', required: false
@@ -63,7 +63,7 @@ describe 'Articles' do
     end
   end
 
-  path '/api/articles/{id}' do
+  path '/api/client/articles/{id}' do
     get 'Find article by id' do
       tags 'Articles'
       parameter name: :id, in: :path, type: :integer
