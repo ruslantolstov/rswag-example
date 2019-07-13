@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Api
-  module Client
+  module Backoffice
     class ArticlesController < BaseController
       before_action :authenticate!, only: %i[create update destroy]
 
@@ -13,16 +13,6 @@ module Api
       def show
         authorize(article, :show?, policy_class: ArticlePolicy)
         render json: render_resource(article)
-      end
-
-      def create
-        @article = current_user.articles.build(resource_params)
-        authorize(@article, :create?, policy_class: ArticlePolicy)
-        if @article.save
-          render json: render_resource(@article), status: :created
-        else
-          render json: render_errors(@article), status: :unprocessable_entity
-        end
       end
 
       def update
