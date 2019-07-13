@@ -3,34 +3,34 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 5.2.3'
+gem 'bcrypt'
+gem 'bootsnap', '>= 1.1.0', require: false
+gem 'dotenv-rails'
+gem 'draper'
+gem 'pagy'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
-gem 'draper'
-gem 'bootsnap', '>= 1.1.0', require: false
-gem 'rack-cors'
-gem 'dotenv-rails'
-gem 'pagy'
-gem 'rswag-api'
-gem 'bcrypt'
 gem 'pundit'
+gem 'rack-cors'
+gem 'rails', '~> 5.2.3'
+gem 'rswag-api'
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'pry-rails'
+  gem 'rspec-rails'
   gem 'rswag-specs'
 end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop', require: false
-  gem 'rubocop-thread_safety', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-thread_safety', require: false
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
