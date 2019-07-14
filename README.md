@@ -24,7 +24,8 @@ Use `docker attach ID` to get into the running container, for detach without exi
 
 ```
 rake rswag:specs:swaggerize
-open http://localhost:3000/api/docs/swagger.json
+open http://localhost:3000/api/docs/client/swagger.json
+open http://localhost:3000/api/docs/backoffice/swagger.json
 ```
 
 
