@@ -218,7 +218,7 @@ GEM
     rubocop-thread_safety (0.3.4)
       rubocop (>= 0.51.0)
     ruby-progressbar (1.10.1)
-    spring (2.1.0)
+    spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
