@@ -1,0 +1,40 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: bootsnap
+    versions:
+    - 1.7.2
+    - 1.7.3
+  - dependency-name: rails
+    versions:
+    - 6.0.3.5
+  - dependency-name: ffaker
+    versions:
+    - 2.17.0
+  - dependency-name: puma
+    versions:
+    - 5.2.1
+  - dependency-name: nokogiri
+    versions:
+    - 1.11.1
+  - dependency-name: rubocop
+    versions:
+    - 1.9.0
+    - 1.9.1
+  - dependency-name: rubocop-performance
+    versions:
+    - 1.7.1
+  - dependency-name: rswag-api
+    versions:
+    - 2.3.2
+    - 2.3.3
+  - dependency-name: database_cleaner
+    versions:
+    - 1.8.5
+    - 2.0.0
